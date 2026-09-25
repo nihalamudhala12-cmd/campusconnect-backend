@@ -2,9 +2,9 @@ name: CampusConnect Backend CI
 
 on:
   push:
-    branches: [main, master]
+    branches: [ main ]
   pull_request:
-    branches: [main, master]
+    branches: [ main ]
 
 jobs:
   backend-ci:
@@ -12,44 +12,38 @@ jobs:
 
     services:
       postgres:
-        image: postgres:16
+        image: postgres:15
         env:
           POSTGRES_USER: postgres
-          POSTGRES_PASSWORD: postgres
-          POSTGRES_DB: campusconnect
+          POSTGRES_PASSWORD: postgrespassword
+          POSTGRES_DB: testdb
         ports:
           - 5432:5432
         options: >-
-          --health-cmd="pg_isready -U postgres -d campusconnect"
-          --health-interval=10s
-          --health-timeout=5s
-          --health-retries=5
+          --health-cmd pg_isready
+          --health-interval 10s
+          --health-timeout 5s
+          --health-retries 5
 
     steps:
-      - name: Checkout repository
-        uses: actions/checkout@v4
-
-      - name: Setup Node.js
-        uses: actions/setup-node@v4
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
         with:
-          node-version: 24
-          cache: npm
+          node-version: 20
 
-      - name: Install dependencies
-        run: npm ci
+      - run: npm ci
 
-      - name: Verify project scripts
-        run: npm run
-
-      - name: Run tests
-        run: npm test
+      # 1. Create database schema / tables first
+      - run: npm run schema:setup # Replace with your schema script (e.g., node src/db/schema.js)
         env:
-          NODE_ENV: test
-          DB_HOST: localhost
-          DB_PORT: 5432
-          DB_NAME: campusconnect
-          DB_USER: postgres
-          DB_PASSWORD: postgres
+          DATABASE_URL: postgres://postgres:postgrespassword@localhost:5432/testdb
 
-      - name: Backend CI completed
-        run: echo "CampusConnect backend CI passed."
+      # 2. Seed database immediately after schema setup
+      - run: npm run db:seed # Replace with your seed script (e.g., node src/db/seed.js)
+        env:
+          DATABASE_URL: postgres://postgres:postgrespassword@localhost:5432/testdb
+
+      # 3. Execute test suite
+      - run: npm test
+        env:
+          DATABASE_URL: postgres://postgres:postgrespassword@localhost:5432/testdb
