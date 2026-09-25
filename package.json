@@ -1,0 +1,44 @@
+{
+  "name": "campusconnect-backend",
+  "version": "1.0.0",
+  "description": "CampusConnect Backend - Step 6.1 Foundation + Step 6.2 Project Setup",
+  "main": "src/server.js",
+  "engines": {
+    "node": ">=18.0.0"
+  },
+  "scripts": {
+    "start": "node src/server.js",
+    "dev": "nodemon src/server.js",
+    "test": "node src/api.foundation.test.js && npm run test:unit && npm run test:integration && node src/foundation.test.js && node src/security.test.js && node src/integration_hardening.test.js && npm run test:destructive",
+    "test:unit": "node src/infrastructure/database/utils/uuid.test.js && node src/infrastructure/database/migrations/runner.test.js",
+    "test:integration": "node src/infrastructure/database/connection.test.js",
+    "test:foundation": "node src/api.foundation.test.js",
+    "test:destructive": "node src/classes.api.test.js && node src/departments.api.test.js && node src/attendance.api.test.js && node src/modules.security.test.js",
+    "db:test:setup": "node src/infrastructure/database/testDatabase.js",
+    "test:all": "npm run test:unit && npm run test:integration && node src/api.foundation.test.js && node src/foundation.test.js && node src/security.test.js && node src/integration_hardening.test.js",
+    "migrate:up": "node src/infrastructure/database/migrations/runner.js up",
+    "migrate:verify": "node src/infrastructure/database/migrations/runner.js verify",
+    "migrate:down": "node src/infrastructure/database/migrations/runner.js down"
+  },
+  "keywords": [
+    "campusconnect",
+    "backend",
+    "express",
+    "nodejs"
+  ],
+  "author": "CampusConnect Team",
+  "license": "ISC",
+  "dependencies": {
+    "bcrypt": "^6.0.0",
+    "dotenv": "^16.4.5",
+    "express": "^4.19.2",
+    "express-rate-limit": "^8.7.0",
+    "express-validator": "^7.3.2",
+    "jsonwebtoken": "^9.0.3",
+    "pg": "^8.13.1"
+  },
+  "devDependencies": {
+    "@playwright/test": "^1.63.0",
+    "nodemon": "^3.1.14"
+  }
+}

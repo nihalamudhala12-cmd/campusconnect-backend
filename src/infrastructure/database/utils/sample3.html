@@ -1,0 +1,844 @@
+<!DOCTYPE html>
+
+<html lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" rel="stylesheet"/><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=JetBrains+Mono:wght@400;500;600&amp;family=Plus+Jakarta+Sans:wght@500;600;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script><script id="tailwind-config">tailwind.config = {
+    darkMode: "class",
+    theme: {
+      extend: {
+        "colors": {
+          "primary": "#4f46e5",
+          "primary-container": "#e0e7ff",
+          "on-primary": "#ffffff",
+          "on-primary-container": "#3730a3",
+          "secondary": "#059669",
+          "secondary-container": "#d1fae5",
+          "on-secondary": "#ffffff",
+          "on-secondary-container": "#065f46",
+          "tertiary": "#0284c7",
+          "background": "#f8fafc",
+          "surface": "#ffffff",
+          "surface-container": "#ffffff",
+          "surface-container-low": "#f8fafc",
+          "surface-container-high": "#f1f5f9",
+          "surface-container-highest": "#e2e8f0",
+          "surface-container-lowest": "#ffffff",
+          "on-surface": "#0f172a",
+          "on-surface-variant": "#64748b",
+          "outline": "#94a3b8",
+          "outline-variant": "#e2e8f0",
+          "error": "#dc2626",
+          "error-container": "#fee2e2",
+          "on-error": "#ffffff",
+          "on-error-container": "#991b1b"
+        },
+        "borderRadius": {
+          "DEFAULT": "0.25rem",
+          "lg": "0.5rem",
+          "xl": "0.75rem",
+          "full": "9999px"
+        },
+        "spacing": {
+          "space-3xs": "0.125rem",
+          "space-2xs": "0.25rem",
+          "space-xs": "0.5rem",
+          "space-sm": "0.75rem",
+          "space-md": "1rem",
+          "space-lg": "1.5rem",
+          "space-xl": "2rem",
+          "space-2xl": "3rem",
+          "space-3xl": "4rem",
+          "sidebar-width": "18rem"
+        },
+        "fontFamily": {
+          "headline-md": ["Plus Jakarta Sans", "Inter", "sans-serif"],
+          "headline-sm": ["Plus Jakarta Sans", "Inter", "sans-serif"],
+          "headline-lg": ["Plus Jakarta Sans", "Inter", "sans-serif"],
+          "body-sm": ["Inter", "sans-serif"],
+          "body-md": ["Inter", "sans-serif"],
+          "body-lg": ["Inter", "sans-serif"],
+          "title-sm": ["Plus Jakarta Sans", "Inter", "sans-serif"],
+          "label-caps": ["Inter", "sans-serif"],
+          "code-metric": ["JetBrains Mono", "monospace"]
+        },
+        "fontSize": {
+          "code-metric": ["12px", {"lineHeight": "16px", "letterSpacing": "0.02em", "fontWeight": "500"}],
+          "label-caps": ["11px", {"lineHeight": "14px", "letterSpacing": "0.06em", "fontWeight": "600"}],
+          "body-sm": ["13px", {"lineHeight": "18px", "letterSpacing": "0em", "fontWeight": "400"}],
+          "body-md": ["14px", {"lineHeight": "20px", "letterSpacing": "-0.005em", "fontWeight": "400"}],
+          "title-sm": ["15px", {"lineHeight": "22px", "letterSpacing": "-0.01em", "fontWeight": "600"}],
+          "headline-md": ["19px", {"lineHeight": "26px", "letterSpacing": "-0.015em", "fontWeight": "600"}],
+          "headline-lg": ["26px", {"lineHeight": "34px", "letterSpacing": "-0.02em", "fontWeight": "700"}]
+        }
+      }
+    }
+  }</script></head><body class="bg-[#f8fafc] font-body-md text-body-md text-on-surface min-h-screen antialiased"><aside class="fixed left-0 top-0 h-full w-sidebar-width bg-[#0c1324] z-50 flex flex-col justify-between border-r border-[#1e293b] shadow-2xl text-slate-300"><div class="flex flex-col h-full"><div class="h-16 px-space-lg flex items-center justify-between border-b border-[#1e293b] bg-[#0c1324]"><div class="flex items-center gap-space-sm"><div class="w-9 h-9 rounded-xl bg-gradient-to-tr from-indigo-600 to-indigo-500 flex items-center justify-center shadow-lg shadow-indigo-500/20"><span class="font-title-sm text-title-sm text-white font-bold tracking-tight">CC</span></div><div class="flex flex-col"><span class="font-title-sm text-title-sm text-white tracking-tight font-semibold">CampusConnect</span><span class="font-code-metric text-code-metric text-indigo-400 uppercase text-[10px]">OS v4.2 Hybrid</span></div></div><button aria-label="Collapse navigation" class="p-space-2xs rounded-lg text-slate-400 hover:bg-[#1e293b] hover:text-white transition-colors" type="button"><span class="material-symbols-outlined text-[20px]">keyboard_double_arrow_left</span></button></div><div class="flex-1 overflow-y-auto px-space-md py-space-md flex flex-col gap-space-lg"><nav class="flex flex-col gap-space-3xs"><div class="px-space-sm pb-space-xs"><span class="font-label-caps text-label-caps uppercase text-slate-400 tracking-wider text-[10px]">Main Workspace</span></div><a aria-current="page" class="group flex items-center gap-space-sm px-space-sm py-space-xs rounded-xl transition-all bg-indigo-600 text-white font-semibold shadow-md shadow-indigo-600/30" data-path="dashboard" href="#"><span class="material-symbols-outlined text-[20px] text-white transition-colors">grid_view</span><span class="font-body-md text-body-md text-white">Dashboard</span></a><a class="group flex items-center gap-space-sm px-space-sm py-space-xs rounded-xl text-slate-400 hover:bg-[#192237] hover:text-slate-100 transition-all" data-path="classes" href="#"><span class="material-symbols-outlined text-[20px] text-slate-500 group-hover:text-indigo-400 transition-colors">school</span><span class="font-body-md text-body-md">Classes</span></a><a class="group flex items-center gap-space-sm px-space-sm py-space-xs rounded-xl text-slate-400 hover:bg-[#192237] hover:text-slate-100 transition-all" data-path="students" href="#"><span class="material-symbols-outlined text-[20px] text-slate-500 group-hover:text-indigo-400 transition-colors">group</span><span class="font-body-md text-body-md">Students</span></a><a class="group flex items-center gap-space-sm px-space-sm py-space-xs rounded-xl text-slate-400 hover:bg-[#192237] hover:text-slate-100 transition-all" data-path="attendance" href="#"><span class="material-symbols-outlined text-[20px] text-slate-500 group-hover:text-indigo-400 transition-colors">fact_check</span><span class="font-body-md text-body-md">Attendance</span></a><a class="group flex items-center gap-space-sm px-space-sm py-space-xs rounded-xl text-slate-400 hover:bg-[#192237] hover:text-slate-100 transition-all" data-path="results" href="#"><span class="material-symbols-outlined text-[20px] text-slate-500 group-hover:text-indigo-400 transition-colors">assignment_turned_in</span><span class="font-body-md text-body-md">Results</span></a></nav><nav class="flex flex-col gap-space-3xs"><div class="px-space-sm pb-space-xs"><span class="font-label-caps text-label-caps uppercase text-slate-400 tracking-wider text-[10px]">Academic Operations</span></div><a class="group flex items-center gap-space-sm px-space-sm py-space-xs rounded-xl text-slate-400 hover:bg-[#192237] hover:text-slate-100 transition-all" data-path="timetable" href="#"><span class="material-symbols-outlined text-[20px] text-slate-500 group-hover:text-indigo-400 transition-colors">calendar_month</span><span class="font-body-md text-body-md">Timetable</span></a><a class="group flex items-center gap-space-sm px-space-sm py-space-xs rounded-xl text-slate-400 hover:bg-[#192237] hover:text-slate-100 transition-all" data-path="analytics" href="#"><span class="material-symbols-outlined text-[20px] text-slate-500 group-hover:text-indigo-400 transition-colors">analytics</span><span class="font-body-md text-body-md">Analytics</span></a></nav><nav class="flex flex-col gap-space-3xs"><div class="px-space-sm pb-space-xs"><span class="font-label-caps text-label-caps uppercase text-slate-400 tracking-wider text-[10px]">Communication</span></div><a class="group flex items-center gap-space-sm px-space-sm py-space-xs rounded-xl text-slate-400 hover:bg-[#192237] hover:text-slate-100 transition-all" data-path="messages" href="#"><span class="material-symbols-outlined text-[20px] text-slate-500 group-hover:text-indigo-400 transition-colors">forum</span><span class="font-body-md text-body-md">Messages</span></a><a class="group flex items-center gap-space-sm px-space-sm py-space-xs rounded-xl text-slate-400 hover:bg-[#192237] hover:text-slate-100 transition-all" data-path="department-chat" href="#"><span class="material-symbols-outlined text-[20px] text-slate-500 group-hover:text-indigo-400 transition-colors">alternate_email</span><span class="font-body-md text-body-md">Department Chat</span></a><a class="group flex items-center gap-space-sm px-space-sm py-space-xs rounded-xl text-slate-400 hover:bg-[#192237] hover:text-slate-100 transition-all" data-path="announcements" href="#"><span class="material-symbols-outlined text-[20px] text-slate-500 group-hover:text-indigo-400 transition-colors">campaign</span><span class="font-body-md text-body-md">Announcements</span></a></nav><nav class="flex flex-col gap-space-3xs"><div class="px-space-sm pb-space-xs"><span class="font-label-caps text-label-caps uppercase text-slate-400 tracking-wider text-[10px]">Administrative</span></div><a class="group flex items-center gap-space-sm px-space-sm py-space-xs rounded-xl text-slate-400 hover:bg-[#192237] hover:text-slate-100 transition-all" data-path="approvals" href="#"><span class="material-symbols-outlined text-[20px] text-slate-500 group-hover:text-indigo-400 transition-colors">verified</span><span class="font-body-md text-body-md">Approvals</span></a><a class="group flex items-center gap-space-sm px-space-sm py-space-xs rounded-xl text-slate-400 hover:bg-[#192237] hover:text-slate-100 transition-all" data-path="department" href="#"><span class="material-symbols-outlined text-[20px] text-slate-500 group-hover:text-indigo-400 transition-colors">domain</span><span class="font-body-md text-body-md">Department</span></a><a class="group flex items-center gap-space-sm px-space-sm py-space-xs rounded-xl text-slate-400 hover:bg-[#192237] hover:text-slate-100 transition-all" data-path="settings" href="#"><span class="material-symbols-outlined text-[20px] text-slate-500 group-hover:text-indigo-400 transition-colors">tune</span><span class="font-body-md text-body-md">Settings</span></a></nav></div></div><div class="p-space-md border-t border-[#1e293b] bg-[#0c1324]"><div class="p-space-sm rounded-xl bg-[#131b2e] border border-[#22304d] flex items-center justify-between"><div class="flex items-center gap-space-xs"><div class="w-2 h-2 rounded-full bg-emerald-400 animate-pulse shadow-sm shadow-emerald-400/50"></div><div class="flex flex-col"><span class="font-label-caps text-label-caps text-slate-200 font-semibold">Cluster Synced</span><span class="font-body-sm text-body-sm text-slate-400 text-[11px]">12ms latency</span></div></div><span class="material-symbols-outlined text-emerald-400 text-[18px]">cloud_done</span></div></div></aside><div class="pl-sidebar-width min-h-screen flex flex-col bg-[#f8fafc]"><header class="fixed top-0 left-sidebar-width right-0 h-16 bg-[#0c1324]/95 backdrop-blur-md z-40 px-space-lg flex items-center justify-between border-b border-[#1e293b] text-slate-200 shadow-md"><div class="flex items-center gap-space-md w-full max-w-md"><div class="relative w-full"><span class="material-symbols-outlined absolute left-space-sm top-1/2 -translate-y-1/2 text-slate-400 text-[18px]">search</span><input class="w-full pl-9 pr-14 py-space-xs rounded-xl bg-[#131b2e] border border-[#22304d] text-white placeholder:text-slate-400 font-body-sm text-body-sm outline-none focus:border-indigo-500 focus:ring-1 focus:ring-indigo-500 transition-all" placeholder="Search records, faculty, or course ID..." type="text"/><div class="absolute right-space-sm top-1/2 -translate-y-1/2 px-space-2xs py-space-3xs rounded-md bg-[#1e293b] border border-[#2f3d5a] font-code-metric text-code-metric text-slate-300 text-[11px]">⌘K</div></div></div><div class="flex items-center gap-space-md"><div class="flex items-center gap-space-2xs px-space-xs py-space-3xs rounded-full bg-[#131b2e] border border-[#22304d]"><span class="font-label-caps text-label-caps uppercase text-slate-400 pl-space-xs text-[10px]">Role:</span><button class="px-space-sm py-space-3xs rounded-full bg-indigo-600 text-white font-label-caps text-label-caps font-semibold shadow-xs transition-all" type="button">Faculty</button><button class="px-space-sm py-space-3xs rounded-full text-slate-400 hover:text-white font-label-caps text-label-caps font-semibold transition-all" type="button">Dean</button><button class="px-space-sm py-space-3xs rounded-full text-slate-400 hover:text-white font-label-caps text-label-caps font-semibold transition-all" type="button">Admin</button></div><button aria-label="Toggle dark mode" class="w-9 h-9 rounded-xl bg-[#131b2e] border border-[#22304d] flex items-center justify-center text-amber-300 hover:bg-[#1e293b] hover:text-amber-200 transition-colors shadow-xs" title="Hybrid Theme Active" type="button"><span class="material-symbols-outlined text-[20px]">light_mode</span></button><button aria-label="System notifications" class="relative w-9 h-9 rounded-xl bg-[#131b2e] border border-[#22304d] flex items-center justify-center text-slate-300 hover:bg-[#1e293b] hover:text-white transition-colors shadow-xs" type="button"><span class="material-symbols-outlined text-[20px]">notifications</span><span class="absolute top-2 right-2 w-2 h-2 rounded-full bg-emerald-400 ring-2 ring-[#0c1324]"></span></button><div class="flex items-center gap-space-sm pl-space-xs"><div class="flex flex-col text-right hidden sm:flex"><span class="font-title-sm text-title-sm text-white leading-none font-semibold">Dr. Elena Vance</span><span class="font-body-sm text-body-sm text-indigo-400 font-medium text-[11px] mt-0.5">Quantum Systems Lead</span></div><div class="w-8 h-8 rounded-full bg-indigo-950 text-indigo-300 border border-indigo-500/40 flex items-center justify-center font-bold text-xs shadow-inner"><span class="material-symbols-outlined text-[18px]">person</span></div></div></div></header><main class="w-full pt-16 flex-1 bg-[#f8fafc] px-space-lg py-space-lg"><div class="flex flex-col w-full gap-space-lg">
+<!-- Executive Header & Quick Actions -->
+<section class="flex flex-col md:flex-row md:items-center md:justify-between gap-space-md bg-white p-space-lg rounded-xl border border-slate-200/90 shadow-sm relative overflow-hidden">
+<div class="absolute -right-16 -top-16 w-64 h-64 bg-indigo-500/5 rounded-full blur-3xl pointer-events-none"></div>
+<div class="flex flex-col gap-space-2xs min-w-0 z-10">
+<div class="flex items-center gap-space-xs">
+<span class="px-space-xs py-space-3xs rounded-md bg-indigo-50 border border-indigo-200/60 font-label-caps text-label-caps text-indigo-700 tracking-wider uppercase font-semibold">Executive Console</span>
+<span class="font-code-metric text-code-metric text-slate-400">•</span>
+<span class="font-code-metric text-code-metric text-slate-500">Session 2026-27 • Autumn Quadrant</span>
+</div>
+<h1 class="font-headline-lg text-headline-lg text-slate-900 tracking-tight">Welcome back, Dr. Jane Smith 👋</h1>
+<p class="font-body-md text-body-md text-slate-600 flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-[16px] text-emerald-600">domain</span>
+<span>Computer Science &amp; Engineering Department</span>
+<span class="text-slate-300">/</span>
+<span class="text-indigo-600 font-semibold">Head of Department (HOD)</span>
+</p>
+</div>
+<!-- Quick Actions -->
+<div class="flex flex-wrap items-center gap-space-xs z-10">
+<button class="group flex items-center gap-space-xs px-space-md py-space-xs rounded-lg bg-indigo-600 text-white font-title-sm text-title-sm shadow-sm hover:bg-indigo-700 hover:shadow transition-all" type="button">
+<span class="material-symbols-outlined text-[20px] transition-transform group-hover:scale-110">add_task</span>
+<span>Take Attendance</span>
+</button>
+<button class="group flex items-center gap-space-xs px-space-md py-space-xs rounded-lg bg-white border border-slate-300 text-slate-800 hover:bg-slate-50 hover:border-slate-400 transition-all shadow-xs" type="button">
+<span class="material-symbols-outlined text-[20px] text-indigo-600">cloud_upload</span>
+<span class="font-title-sm text-title-sm">Submit Marks</span>
+</button>
+<button class="group flex items-center gap-space-xs px-space-sm py-space-xs rounded-lg bg-white border border-slate-300 text-slate-700 hover:text-slate-900 hover:bg-slate-50 hover:border-slate-400 transition-all shadow-xs" type="button">
+<span class="material-symbols-outlined text-[20px]">file_download</span>
+<span class="font-body-md text-body-md">Export Summary</span>
+</button>
+</div>
+</section>
+<!-- Top Row: 4 KPI Cards -->
+<section class="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-4 gap-space-md">
+<!-- Metric 1: Total Students -->
+<div class="relative flex flex-col justify-between p-space-md rounded-xl bg-white border border-slate-200/90 shadow-sm hover:shadow-md transition-all group overflow-hidden">
+<div class="flex items-start justify-between">
+<div class="flex flex-col">
+<span class="font-label-caps text-label-caps text-slate-500 uppercase tracking-wider font-semibold text-[11px]">Total Enrollment</span>
+<span class="font-headline-lg text-headline-lg text-slate-900 mt-space-2xs">1,240</span>
+</div>
+<div class="p-space-xs rounded-lg bg-indigo-50 text-indigo-600 border border-indigo-100">
+<span class="material-symbols-outlined text-[22px]">group</span>
+</div>
+</div>
+<div class="flex items-center justify-between mt-space-md pt-space-xs border-t border-slate-100">
+<div class="flex items-center gap-space-2xs text-emerald-600 font-code-metric text-code-metric font-semibold">
+<span class="material-symbols-outlined text-[16px]">arrow_upward</span>
+<span>+2.4%</span>
+<span class="text-slate-500 font-body-sm text-body-sm font-normal ml-1">vs term '25</span>
+</div>
+<!-- Sparkline SVG -->
+<svg class="w-20 h-6 text-emerald-500" fill="none" viewbox="0 0 80 24">
+<path d="M2 18 L18 14 L34 16 L50 8 L66 11 L78 3" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5"></path>
+</svg>
+</div>
+</div>
+<!-- Metric 2: Faculty Members -->
+<div class="relative flex flex-col justify-between p-space-md rounded-xl bg-white border border-slate-200/90 shadow-sm hover:shadow-md transition-all group overflow-hidden">
+<div class="flex items-start justify-between">
+<div class="flex flex-col">
+<span class="font-label-caps text-label-caps text-slate-500 uppercase tracking-wider font-semibold text-[11px]">Faculty Rosters</span>
+<span class="font-headline-lg text-headline-lg text-slate-900 mt-space-2xs">48</span>
+</div>
+<div class="p-space-xs rounded-lg bg-emerald-50 text-emerald-600 border border-emerald-100">
+<span class="material-symbols-outlined text-[22px]">school</span>
+</div>
+</div>
+<div class="flex items-center justify-between mt-space-md pt-space-xs border-t border-slate-100">
+<div class="flex items-center gap-space-2xs text-emerald-600 font-code-metric text-code-metric font-semibold">
+<span class="w-2 h-2 rounded-full bg-emerald-500 animate-ping"></span>
+<span>98% Active</span>
+<span class="text-slate-500 font-body-sm text-body-sm font-normal ml-1">47 on campus</span>
+</div>
+<svg class="w-20 h-6 text-indigo-600" fill="none" viewbox="0 0 80 24">
+<path d="M2 12 L18 10 L34 11 L50 6 L66 7 L78 4" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5"></path>
+</svg>
+</div>
+</div>
+<!-- Metric 3: Avg. Attendance -->
+<div class="relative flex flex-col justify-between p-space-md rounded-xl bg-white border border-slate-200/90 shadow-sm hover:shadow-md transition-all group overflow-hidden">
+<div class="flex items-start justify-between">
+<div class="flex flex-col">
+<span class="font-label-caps text-label-caps text-slate-500 uppercase tracking-wider font-semibold text-[11px]">Avg. Attendance</span>
+<span class="font-headline-lg text-headline-lg text-slate-900 mt-space-2xs">88.5%</span>
+</div>
+<div class="p-space-xs rounded-lg bg-emerald-50 text-emerald-600 border border-emerald-100">
+<span class="material-symbols-outlined text-[22px]">fact_check</span>
+</div>
+</div>
+<div class="flex items-center justify-between mt-space-md pt-space-xs border-t border-slate-100">
+<div class="flex items-center gap-space-2xs text-emerald-600 font-code-metric text-code-metric">
+<span class="px-space-2xs py-space-3xs rounded bg-emerald-100/70 text-emerald-800 font-semibold text-[11px]">Target: 85%</span>
+<span class="text-slate-500 font-body-sm text-body-sm ml-1 font-medium">Optimal</span>
+</div>
+<svg class="w-20 h-6 text-emerald-500" fill="none" viewbox="0 0 80 24">
+<path d="M2 20 L20 15 L38 12 L52 14 L68 7 L78 4" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5"></path>
+</svg>
+</div>
+</div>
+<!-- Metric 4: Pending Approvals -->
+<div class="relative flex flex-col justify-between p-space-md rounded-xl bg-white border border-slate-200/90 shadow-sm hover:shadow-md transition-all group overflow-hidden">
+<div class="flex items-start justify-between">
+<div class="flex flex-col">
+<span class="font-label-caps text-label-caps text-slate-500 uppercase tracking-wider font-semibold text-[11px]">Pending Approvals</span>
+<span class="font-headline-lg text-headline-lg text-rose-600 mt-space-2xs">07</span>
+</div>
+<div class="p-space-xs rounded-lg bg-rose-50 text-rose-600 border border-rose-100">
+<span class="material-symbols-outlined text-[22px]">pending_actions</span>
+</div>
+</div>
+<div class="flex items-center justify-between mt-space-md pt-space-xs border-t border-slate-100">
+<div class="flex items-center gap-space-2xs font-code-metric text-code-metric">
+<span class="px-space-2xs py-space-3xs rounded bg-rose-100/70 text-rose-700 font-semibold text-[11px]">Action Required</span>
+<span class="text-slate-500 font-body-sm text-body-sm ml-1">4 leave, 3 grades</span>
+</div>
+<span class="material-symbols-outlined text-slate-400 text-[18px]">chevron_right</span>
+</div>
+</div>
+</section>
+<!-- Interactive 3D Department Analytics Centerpiece (Cybernetic Dark Telemetry Station) -->
+<section class="flex flex-col lg:flex-row gap-space-md bg-[#0a0f1d] p-space-lg rounded-xl border border-[#1e293b] shadow-xl text-slate-200 relative overflow-hidden">
+<div class="absolute inset-0 bg-gradient-to-tr from-indigo-950/20 via-transparent to-cyan-950/20 pointer-events-none"></div>
+<!-- Left: Canvas & Visualizer -->
+<div class="flex-1 flex flex-col gap-space-sm relative min-w-0 z-10">
+<div class="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-space-xs">
+<div class="flex items-center gap-space-xs">
+<span class="w-2.5 h-2.5 rounded-full bg-cyan-400 animate-pulse shadow-sm shadow-cyan-400/50"></span>
+<h2 class="font-headline-md text-headline-md text-white tracking-tight">Departmental Topology &amp; Real-time Activity Hub</h2>
+</div>
+<!-- Topology Controls -->
+<div class="flex items-center gap-space-2xs">
+<button class="px-space-xs py-space-3xs rounded-lg bg-[#131b2e] border border-[#22304d] hover:bg-[#1e293b] text-slate-300 hover:text-white text-body-sm font-body-sm flex items-center gap-space-3xs transition-colors shadow-xs" id="reset-cam" type="button">
+<span class="material-symbols-outlined text-[14px]">autorenew</span>
+<span>Reset View</span>
+</button>
+<div class="h-4 w-px bg-[#22304d]"></div>
+<button class="topo-filter px-space-xs py-space-3xs rounded-lg bg-indigo-600 text-white font-label-caps text-label-caps shadow-sm" id="filter-all" type="button">All Years</button>
+<button class="topo-filter px-space-xs py-space-3xs rounded-lg bg-[#131b2e] border border-[#22304d] text-slate-300 hover:text-white hover:bg-[#1e293b] font-label-caps text-label-caps transition-colors" id="filter-y3" type="button">Year 3 &amp; 4</button>
+<button class="topo-filter px-space-xs py-space-3xs rounded-lg bg-[#131b2e] border border-[#22304d] text-slate-300 hover:text-white hover:bg-[#1e293b] font-label-caps text-label-caps transition-colors" id="filter-labs" type="button">Labs Only</button>
+</div>
+</div>
+<!-- Canvas Box -->
+<div class="relative w-full h-80 sm:h-96 rounded-xl bg-[#070b14] border border-[#1a253c] overflow-hidden flex items-center justify-center select-none cursor-grab active:cursor-grabbing shadow-2xl" id="canvas-container">
+<!-- Interactive 3D HTML5 Canvas -->
+<canvas class="w-full h-full block" id="topoCanvas"></canvas>
+<!-- Dynamic Hover Tooltip HUD -->
+<div class="absolute pointer-events-none hidden bg-[#0c1324]/95 border border-[#2f3d5a] backdrop-blur-md px-space-sm py-space-xs rounded-lg shadow-2xl flex flex-col gap-1 z-30 transition-opacity" id="node-tooltip">
+<div class="flex items-center gap-2">
+<span class="w-2 h-2 rounded-full bg-cyan-400" id="tooltip-status"></span>
+<span class="font-title-sm text-title-sm text-white font-semibold" id="tooltip-title">Node Name</span>
+</div>
+<div class="flex items-center gap-3 font-code-metric text-code-metric text-slate-400">
+<span>Attendance: <strong class="text-cyan-400 font-semibold" id="tooltip-att">92%</strong></span>
+<span>Load: <strong class="text-indigo-400 font-semibold" id="tooltip-load">Normal</strong></span>
+</div>
+</div>
+<!-- Canvas Telemetry Overlay -->
+<div class="absolute bottom-space-xs left-space-sm flex items-center gap-space-sm font-code-metric text-code-metric text-slate-400 pointer-events-none text-[11px]">
+<span>COORDS: <strong class="text-slate-200 font-semibold" id="coord-readout">0.00, 0.00</strong></span>
+<span>FPS: <strong class="text-emerald-400 font-semibold">60.0</strong></span>
+<span>ROT: <strong class="text-indigo-400 font-semibold">DRAG ORBIT</strong></span>
+</div>
+<div class="absolute top-space-xs right-space-sm pointer-events-none flex items-center gap-space-2xs bg-[#0c1324]/90 border border-[#22304d] backdrop-blur-xs px-space-xs py-space-3xs rounded-md shadow-sm">
+<span class="material-symbols-outlined text-[14px] text-cyan-400">hub</span>
+<span class="font-code-metric text-code-metric text-slate-200 font-medium text-[11px]">6 Active Cluster Nodes</span>
+</div>
+</div>
+</div>
+<!-- Right: Focused Node Telemetry Sidebar -->
+<div class="lg:w-80 flex flex-col justify-between gap-space-md bg-[#0f172a] border border-[#1e293b] p-space-md rounded-xl z-10 shadow-lg">
+<div class="flex flex-col gap-space-sm">
+<div class="flex items-center justify-between pb-space-xs border-b border-[#1e293b]">
+<span class="font-label-caps text-label-caps text-slate-400 uppercase font-semibold text-[10px]">Active Inspection</span>
+<span class="font-code-metric text-code-metric px-space-2xs py-space-3xs rounded bg-emerald-950/80 border border-emerald-500/30 text-emerald-300 font-semibold text-[10px]">ONLINE</span>
+</div>
+<div class="flex flex-col gap-space-2xs">
+<span class="font-headline-md text-headline-md text-white" id="inspect-title">CSE Core Node #1</span>
+<p class="font-body-sm text-body-sm text-slate-400" id="inspect-desc">Data Structures &amp; Algorithms cluster handling concurrent practical lab batches.</p>
+</div>
+<div class="grid grid-cols-2 gap-space-xs pt-space-2xs">
+<div class="flex flex-col p-space-xs rounded-lg bg-[#162036] border border-[#22304d]">
+<span class="font-label-caps text-label-caps text-slate-400 font-semibold text-[10px]">Sync Rate</span>
+<span class="font-title-sm text-title-sm text-emerald-400 font-bold" id="inspect-sync">99.4%</span>
+</div>
+<div class="flex flex-col p-space-xs rounded-lg bg-[#162036] border border-[#22304d]">
+<span class="font-label-caps text-label-caps text-slate-400 font-semibold text-[10px]">Lab Headcount</span>
+<span class="font-title-sm text-title-sm text-cyan-400 font-bold" id="inspect-count">42 / 45</span>
+</div>
+<div class="flex flex-col p-space-xs rounded-lg bg-[#162036] border border-[#22304d]">
+<span class="font-label-caps text-label-caps text-slate-400 font-semibold text-[10px]">Term Progress</span>
+<span class="font-title-sm text-title-sm text-white font-bold">Wk 8 of 16</span>
+</div>
+<div class="flex flex-col p-space-xs rounded-lg bg-[#162036] border border-[#22304d]">
+<span class="font-label-caps text-label-caps text-slate-400 font-semibold text-[10px]">Lab Station</span>
+<span class="font-title-sm text-title-sm text-indigo-400 font-bold">Cluster A</span>
+</div>
+</div>
+</div>
+<!-- Quick Action on Selection -->
+<div class="flex flex-col gap-space-2xs pt-space-sm">
+<button class="w-full py-space-xs rounded-lg bg-indigo-600 hover:bg-indigo-500 text-white font-title-sm text-title-sm flex items-center justify-center gap-space-xs transition-colors shadow-md shadow-indigo-600/30" type="button">
+<span class="material-symbols-outlined text-[18px]">query_stats</span>
+<span>View Node Telemetry</span>
+</button>
+<button class="w-full py-space-xs rounded-lg bg-[#162036] border border-[#22304d] hover:bg-[#1e293b] text-slate-300 hover:text-white text-body-sm font-body-sm flex items-center justify-center gap-space-xs transition-colors font-medium" type="button">
+<span class="material-symbols-outlined text-[16px] text-cyan-400">broadcast_on_personal</span>
+<span>Broadcast Class Announcement</span>
+</button>
+</div>
+</div>
+</section>
+<!-- Middle Grid Panels -->
+<section class="grid grid-cols-1 lg:grid-cols-12 gap-space-md">
+<!-- Weekly Schedule & Real-time Class Heatmap (7 cols) -->
+<div class="lg:col-span-7 flex flex-col gap-space-md bg-white border border-slate-200/90 p-space-md rounded-xl shadow-sm">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-indigo-600 text-[20px]">calendar_today</span>
+<h3 class="font-headline-md text-headline-md text-slate-900">Weekly Schedule &amp; Hall Status</h3>
+</div>
+<span class="font-code-metric text-code-metric text-slate-500 text-[11px]">Today: Wednesday, Oct 24</span>
+</div>
+<!-- Real-time Class Feed -->
+<div class="flex flex-col gap-space-xs">
+<!-- Item 1: Active Now -->
+<div class="flex items-center justify-between p-space-sm rounded-lg bg-slate-50 border border-slate-200/80 hover:bg-slate-100/80 transition-colors">
+<div class="flex items-center gap-space-sm min-w-0">
+<div class="w-2.5 h-10 rounded-full bg-emerald-500"></div>
+<div class="flex flex-col min-w-0">
+<div class="flex items-center gap-space-2xs">
+<span class="font-title-sm text-title-sm text-slate-900 font-semibold truncate">CS-201: Data Structures</span>
+<span class="px-space-2xs py-space-3xs rounded-full bg-emerald-100 text-emerald-800 font-label-caps text-label-caps font-semibold text-[10px]">Active Now</span>
+</div>
+<span class="font-body-sm text-body-sm text-slate-500">Prof. Alan Turing • Lecture Hall B • 68 Students</span>
+</div>
+</div>
+<div class="flex flex-col items-end shrink-0 pl-space-xs">
+<span class="font-code-metric text-code-metric text-slate-900 font-semibold">10:00 - 11:30</span>
+<span class="font-body-sm text-body-sm text-emerald-600 font-semibold">94% Present</span>
+</div>
+</div>
+<!-- Item 2: Upcoming -->
+<div class="flex items-center justify-between p-space-sm rounded-lg bg-slate-50 border border-slate-200/80 hover:bg-slate-100/80 transition-colors">
+<div class="flex items-center gap-space-sm min-w-0">
+<div class="w-2.5 h-10 rounded-full bg-indigo-600"></div>
+<div class="flex flex-col min-w-0">
+<div class="flex items-center gap-space-2xs">
+<span class="font-title-sm text-title-sm text-slate-900 font-semibold truncate">CS-301: Advanced Algorithms</span>
+<span class="px-space-2xs py-space-3xs rounded-full bg-slate-200 text-slate-700 font-label-caps text-label-caps font-semibold text-[10px]">In 20 min</span>
+</div>
+<span class="font-body-sm text-body-sm text-slate-500">Dr. Alex Johnson • Seminar Hall 4 • 54 Students</span>
+</div>
+</div>
+<div class="flex flex-col items-end shrink-0 pl-space-xs">
+<span class="font-code-metric text-code-metric text-slate-900 font-semibold">11:30 - 13:00</span>
+<span class="font-body-sm text-body-sm text-slate-500">Roll Ready</span>
+</div>
+</div>
+<!-- Item 3: Afternoon Practical -->
+<div class="flex items-center justify-between p-space-sm rounded-lg bg-slate-50 border border-slate-200/80 hover:bg-slate-100/80 transition-colors">
+<div class="flex items-center gap-space-sm min-w-0">
+<div class="w-2.5 h-10 rounded-full bg-slate-300"></div>
+<div class="flex flex-col min-w-0">
+<div class="flex items-center gap-space-2xs">
+<span class="font-title-sm text-title-sm text-slate-900 font-semibold truncate">CS-408: Distributed Systems Lab</span>
+<span class="px-space-2xs py-space-3xs rounded-full bg-slate-200 text-slate-700 font-label-caps text-label-caps font-semibold text-[10px]">Scheduled</span>
+</div>
+<span class="font-body-sm text-body-sm text-slate-500">Prof. Sarah Lee • Computing Cluster Alpha • 32 Students</span>
+</div>
+</div>
+<div class="flex flex-col items-end shrink-0 pl-space-xs">
+<span class="font-code-metric text-code-metric text-slate-900 font-semibold">14:00 - 16:30</span>
+<span class="font-body-sm text-body-sm text-slate-500">Lab Prepped</span>
+</div>
+</div>
+</div>
+<!-- Quick Attendance Mini Heatmap -->
+<div class="flex flex-col gap-space-xs pt-space-xs border-t border-slate-100">
+<span class="font-label-caps text-label-caps text-slate-500 uppercase font-semibold text-[10px]">Cohort Attendance Intensity (Mon - Fri)</span>
+<div class="grid grid-cols-5 gap-space-xs text-center font-code-metric text-code-metric">
+<div class="flex flex-col gap-1 p-space-2xs rounded bg-slate-50 border border-slate-200/70">
+<span class="text-slate-600 text-[11px] font-semibold">MON</span>
+<div class="h-2 rounded bg-emerald-500"></div>
+<span class="text-slate-800 font-semibold">91%</span>
+</div>
+<div class="flex flex-col gap-1 p-space-2xs rounded bg-slate-50 border border-slate-200/70">
+<span class="text-slate-600 text-[11px] font-semibold">TUE</span>
+<div class="h-2 rounded bg-emerald-500"></div>
+<span class="text-slate-800 font-semibold">88%</span>
+</div>
+<div class="flex flex-col gap-1 p-space-2xs rounded bg-slate-50 border border-slate-200/70">
+<span class="text-slate-600 text-[11px] font-semibold">WED</span>
+<div class="h-2 rounded bg-emerald-500"></div>
+<span class="text-slate-800 font-semibold">94%</span>
+</div>
+<div class="flex flex-col gap-1 p-space-2xs rounded bg-slate-50 border border-slate-200/70">
+<span class="text-slate-600 text-[11px] font-semibold">THU</span>
+<div class="h-2 rounded bg-slate-200"></div>
+<span class="text-slate-400">--</span>
+</div>
+<div class="flex flex-col gap-1 p-space-2xs rounded bg-slate-50 border border-slate-200/70">
+<span class="text-slate-600 text-[11px] font-semibold">FRI</span>
+<div class="h-2 rounded bg-slate-200"></div>
+<span class="text-slate-400">--</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Recent Department Activity & Audit Stream (5 cols) -->
+<div class="lg:col-span-5 flex flex-col justify-between gap-space-md bg-white border border-slate-200/90 p-space-md rounded-xl shadow-sm">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-indigo-600 text-[20px]">history_toggle_off</span>
+<h3 class="font-headline-md text-headline-md text-slate-900">Department Activity Feed</h3>
+</div>
+<span class="px-space-2xs py-space-3xs rounded-md bg-indigo-50 border border-indigo-200/50 text-indigo-700 font-code-metric text-code-metric font-semibold text-[10px]">Live Stream</span>
+</div>
+<div class="flex flex-col gap-space-sm">
+<!-- Event 1 -->
+<div class="flex items-start gap-space-sm pb-space-xs border-b border-slate-100">
+<div class="w-8 h-8 rounded-full bg-indigo-100 text-indigo-700 flex items-center justify-center shrink-0 font-title-sm text-title-sm font-semibold">
+            SL
+          </div>
+<div class="flex flex-col min-w-0 flex-1">
+<div class="flex items-center justify-between gap-space-2xs">
+<span class="font-title-sm text-title-sm text-slate-900 font-semibold truncate">Prof. Sarah Lee</span>
+<span class="font-code-metric text-code-metric text-slate-400 shrink-0">12m ago</span>
+</div>
+<p class="font-body-sm text-body-sm text-slate-600">Submitted Duty Leave Application (Attending IEEE Conf).</p>
+<div class="flex items-center gap-space-2xs mt-space-2xs">
+<span class="px-space-2xs py-space-3xs rounded bg-rose-50 border border-rose-200/60 text-rose-700 font-label-caps text-label-caps font-semibold text-[10px]">Approval Req</span>
+<button class="text-indigo-600 hover:underline font-code-metric text-code-metric font-semibold text-[11px]" type="button">Review →</button>
+</div>
+</div>
+</div>
+<!-- Event 2 -->
+<div class="flex items-start gap-space-sm pb-space-xs border-b border-slate-100">
+<div class="w-8 h-8 rounded-full bg-emerald-100 text-emerald-800 flex items-center justify-center shrink-0 font-title-sm text-title-sm font-semibold">
+            AJ
+          </div>
+<div class="flex flex-col min-w-0 flex-1">
+<div class="flex items-center justify-between gap-space-2xs">
+<span class="font-title-sm text-title-sm text-slate-900 font-semibold truncate">Dr. Alex Johnson</span>
+<span class="font-code-metric text-code-metric text-slate-400 shrink-0">45m ago</span>
+</div>
+<p class="font-body-sm text-body-sm text-slate-600">Uploaded Mid-term marks for CS-301 (54 students evaluated).</p>
+<div class="flex items-center gap-space-2xs mt-space-2xs">
+<span class="px-space-2xs py-space-3xs rounded bg-emerald-50 border border-emerald-200/60 text-emerald-700 font-label-caps text-label-caps font-semibold text-[10px]">Marks Published</span>
+</div>
+</div>
+</div>
+<!-- Event 3 -->
+<div class="flex items-start gap-space-sm">
+<div class="w-8 h-8 rounded-full bg-slate-100 text-slate-700 flex items-center justify-center shrink-0 font-title-sm text-title-sm font-semibold">
+            CC
+          </div>
+<div class="flex flex-col min-w-0 flex-1">
+<div class="flex items-center justify-between gap-space-2xs">
+<span class="font-title-sm text-title-sm text-slate-900 font-semibold truncate">Curriculum Board</span>
+<span class="font-code-metric text-code-metric text-slate-400 shrink-0">2h ago</span>
+</div>
+<p class="font-body-sm text-body-sm text-slate-600">Syllabus revision proposal drafted for Elective: Quantum Computing.</p>
+<div class="flex items-center gap-space-2xs mt-space-2xs">
+<span class="px-space-2xs py-space-3xs rounded bg-slate-100 text-slate-600 font-label-caps text-label-caps font-semibold text-[10px]">Under Review</span>
+</div>
+</div>
+</div>
+</div>
+<button class="w-full py-space-xs rounded-lg bg-slate-50 border border-slate-200 hover:bg-slate-100 text-slate-700 font-body-sm text-body-sm flex items-center justify-center gap-space-xs transition-colors shadow-xs" type="button">
+<span>Open Complete Audit Trail</span>
+<span class="material-symbols-outlined text-[16px]">arrow_forward</span>
+</button>
+</div>
+</section>
+<!-- Bottom Section: Performance Distribution & Action Drawer Preview -->
+<section class="grid grid-cols-1 lg:grid-cols-12 gap-space-md">
+<!-- Academic Performance Distribution Bar Chart (7 cols) -->
+<div class="lg:col-span-7 flex flex-col gap-space-md bg-white border border-slate-200/90 p-space-md rounded-xl shadow-sm">
+<div class="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-space-xs">
+<div class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-indigo-600 text-[20px]">bar_chart</span>
+<h3 class="font-headline-md text-headline-md text-slate-900">Academic Performance Distribution</h3>
+</div>
+<div class="flex items-center gap-space-xs font-code-metric text-code-metric text-slate-500 text-[11px]">
+<span class="flex items-center gap-1"><span class="w-2.5 h-2.5 rounded bg-indigo-600"></span> Current Sem</span>
+<span class="flex items-center gap-1"><span class="w-2.5 h-2.5 rounded bg-slate-200"></span> Historical Median</span>
+</div>
+</div>
+<!-- Vector Performance Chart -->
+<div class="flex flex-col gap-space-sm pt-space-xs">
+<div class="grid grid-cols-5 gap-space-md items-end h-48 px-space-md bg-slate-50 border border-slate-200/80 rounded-lg pt-space-lg">
+<!-- Grade A+ -->
+<div class="flex flex-col items-center gap-space-xs h-full justify-end group">
+<div class="w-full max-w-[36px] bg-indigo-100 rounded-t flex flex-col justify-end transition-all relative" style="height: 78%;">
+<span class="opacity-0 group-hover:opacity-100 absolute -top-6 left-1/2 -translate-x-1/2 font-code-metric text-code-metric text-indigo-700 transition-opacity font-bold text-[11px]">28%</span>
+<div class="w-full bg-indigo-600 rounded-t" style="height: 70%;"></div>
+</div>
+<span class="font-label-caps text-label-caps text-slate-700 font-semibold text-[11px]">A &amp; A+</span>
+</div>
+<!-- Grade B -->
+<div class="flex flex-col items-center gap-space-xs h-full justify-end group">
+<div class="w-full max-w-[36px] bg-indigo-100 rounded-t flex flex-col justify-end transition-all relative" style="height: 92%;">
+<span class="opacity-0 group-hover:opacity-100 absolute -top-6 left-1/2 -translate-x-1/2 font-code-metric text-code-metric text-indigo-700 transition-opacity font-bold text-[11px]">44%</span>
+<div class="w-full bg-indigo-600 rounded-t" style="height: 85%;"></div>
+</div>
+<span class="font-label-caps text-label-caps text-slate-700 font-semibold text-[11px]">B &amp; B+</span>
+</div>
+<!-- Grade C -->
+<div class="flex flex-col items-center gap-space-xs h-full justify-end group">
+<div class="w-full max-w-[36px] bg-indigo-100 rounded-t flex flex-col justify-end transition-all relative" style="height: 45%;">
+<span class="opacity-0 group-hover:opacity-100 absolute -top-6 left-1/2 -translate-x-1/2 font-code-metric text-code-metric text-indigo-700 transition-opacity font-bold text-[11px]">18%</span>
+<div class="w-full bg-indigo-600 rounded-t" style="height: 40%;"></div>
+</div>
+<span class="font-label-caps text-label-caps text-slate-700 font-semibold text-[11px]">C &amp; C+</span>
+</div>
+<!-- Grade D -->
+<div class="flex flex-col items-center gap-space-xs h-full justify-end group">
+<div class="w-full max-w-[36px] bg-indigo-100 rounded-t flex flex-col justify-end transition-all relative" style="height: 22%;">
+<span class="opacity-0 group-hover:opacity-100 absolute -top-6 left-1/2 -translate-x-1/2 font-code-metric text-code-metric text-indigo-700 transition-opacity font-bold text-[11px]">7%</span>
+<div class="w-full bg-indigo-500 rounded-t" style="height: 20%;"></div>
+</div>
+<span class="font-label-caps text-label-caps text-slate-700 font-semibold text-[11px]">D</span>
+</div>
+<!-- Remedial -->
+<div class="flex flex-col items-center gap-space-xs h-full justify-end group">
+<div class="w-full max-w-[36px] bg-rose-100 rounded-t flex flex-col justify-end transition-all relative" style="height: 12%;">
+<span class="opacity-0 group-hover:opacity-100 absolute -top-6 left-1/2 -translate-x-1/2 font-code-metric text-code-metric text-rose-600 transition-opacity font-bold text-[11px]">3%</span>
+<div class="w-full bg-rose-500 rounded-t" style="height: 10%;"></div>
+</div>
+<span class="font-label-caps text-label-caps text-rose-600 font-semibold text-[11px]">Remedial</span>
+</div>
+</div>
+<div class="flex items-center justify-between text-body-sm font-body-sm text-slate-600 pt-space-xs">
+<span>Overall Department CGPA Average: <strong class="text-slate-900 font-title-sm text-title-sm font-bold">3.42 / 4.00</strong></span>
+<span class="text-emerald-600 flex items-center gap-1 font-code-metric text-code-metric font-semibold text-[12px]">
+<span class="material-symbols-outlined text-[16px]">trending_up</span> +0.14 vs previous term
+          </span>
+</div>
+</div>
+</div>
+<!-- Quick Approvals Action Drawer Preview (5 cols) -->
+<div class="lg:col-span-5 flex flex-col justify-between gap-space-md bg-white border border-slate-200/90 p-space-md rounded-xl shadow-sm">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-indigo-600 text-[20px]">assignment_turned_in</span>
+<h3 class="font-headline-md text-headline-md text-slate-900">Urgent Approval Queue</h3>
+</div>
+<span class="px-space-2xs py-space-3xs rounded-full bg-rose-100 text-rose-700 font-code-metric text-code-metric font-semibold text-[10px]">3 Critical</span>
+</div>
+<div class="flex flex-col gap-space-xs" id="approval-list">
+<!-- Item 1 -->
+<div class="flex items-center justify-between p-space-sm rounded-lg bg-slate-50 border border-slate-200/80 hover:bg-slate-100/80 transition-colors" id="appr-1">
+<div class="flex flex-col min-w-0 pr-space-xs">
+<div class="flex items-center gap-space-2xs">
+<span class="font-title-sm text-title-sm text-slate-900 font-semibold truncate">Grade Revision: Marcus Vance</span>
+<span class="px-space-2xs py-space-3xs rounded bg-slate-200 text-slate-700 font-label-caps text-label-caps font-semibold text-[10px]">CS-201</span>
+</div>
+<span class="font-body-sm text-body-sm text-slate-500">Re-eval score: 74 → 81 • Submitted by Prof. Alan</span>
+</div>
+<div class="flex items-center gap-space-2xs shrink-0">
+<button class="w-8 h-8 rounded-lg bg-emerald-100 hover:bg-emerald-200 text-emerald-700 flex items-center justify-center transition-colors shadow-xs" onclick="document.getElementById('appr-1').style.display='none'" title="Approve" type="button">
+<span class="material-symbols-outlined text-[18px]">check</span>
+</button>
+<button class="w-8 h-8 rounded-lg bg-white border border-slate-300 hover:bg-rose-50 hover:text-rose-600 hover:border-rose-200 text-slate-600 flex items-center justify-center transition-colors shadow-xs" onclick="document.getElementById('appr-1').style.display='none'" title="Decline" type="button">
+<span class="material-symbols-outlined text-[18px]">close</span>
+</button>
+</div>
+</div>
+<!-- Item 2 -->
+<div class="flex items-center justify-between p-space-sm rounded-lg bg-slate-50 border border-slate-200/80 hover:bg-slate-100/80 transition-colors" id="appr-2">
+<div class="flex flex-col min-w-0 pr-space-xs">
+<div class="flex items-center gap-space-2xs">
+<span class="font-title-sm text-title-sm text-slate-900 font-semibold truncate">Faculty Leave: Prof. Sarah Lee</span>
+<span class="px-space-2xs py-space-3xs rounded bg-slate-200 text-slate-700 font-label-caps text-label-caps font-semibold text-[10px]">3 Days</span>
+</div>
+<span class="font-body-sm text-body-sm text-slate-500">Conference presentation • Substitute arranged</span>
+</div>
+<div class="flex items-center gap-space-2xs shrink-0">
+<button class="w-8 h-8 rounded-lg bg-emerald-100 hover:bg-emerald-200 text-emerald-700 flex items-center justify-center transition-colors shadow-xs" onclick="document.getElementById('appr-2').style.display='none'" title="Approve" type="button">
+<span class="material-symbols-outlined text-[18px]">check</span>
+</button>
+<button class="w-8 h-8 rounded-lg bg-white border border-slate-300 hover:bg-rose-50 hover:text-rose-600 hover:border-rose-200 text-slate-600 flex items-center justify-center transition-colors shadow-xs" onclick="document.getElementById('appr-2').style.display='none'" title="Decline" type="button">
+<span class="material-symbols-outlined text-[18px]">close</span>
+</button>
+</div>
+</div>
+<!-- Item 3 -->
+<div class="flex items-center justify-between p-space-sm rounded-lg bg-slate-50 border border-slate-200/80 hover:bg-slate-100/80 transition-colors" id="appr-3">
+<div class="flex flex-col min-w-0 pr-space-xs">
+<div class="flex items-center gap-space-2xs">
+<span class="font-title-sm text-title-sm text-slate-900 font-semibold truncate">Lab Equipment Req: Cluster GPU-2</span>
+<span class="px-space-2xs py-space-3xs rounded bg-slate-200 text-slate-700 font-label-caps text-label-caps font-semibold text-[10px]">Dept Budget</span>
+</div>
+<span class="font-body-sm text-body-sm text-slate-500">Maintenance replacement unit for AI Research Lab</span>
+</div>
+<div class="flex items-center gap-space-2xs shrink-0">
+<button class="w-8 h-8 rounded-lg bg-emerald-100 hover:bg-emerald-200 text-emerald-700 flex items-center justify-center transition-colors shadow-xs" onclick="document.getElementById('appr-3').style.display='none'" title="Approve" type="button">
+<span class="material-symbols-outlined text-[18px]">check</span>
+</button>
+<button class="w-8 h-8 rounded-lg bg-white border border-slate-300 hover:bg-rose-50 hover:text-rose-600 hover:border-rose-200 text-slate-600 flex items-center justify-center transition-colors shadow-xs" onclick="document.getElementById('appr-3').style.display='none'" title="Decline" type="button">
+<span class="material-symbols-outlined text-[18px]">close</span>
+</button>
+</div>
+</div>
+</div>
+<div class="flex items-center justify-between pt-space-xs border-t border-slate-100">
+<span class="font-body-sm text-body-sm text-slate-500">4 more standard requests</span>
+<button class="font-title-sm text-title-sm text-indigo-600 hover:underline flex items-center gap-1 font-semibold" type="button">
+<span>Review All (07)</span>
+<span class="material-symbols-outlined text-[16px]">chevron_right</span>
+</button>
+</div>
+</div>
+</section>
+<!-- Interactive 3D Canvas Engine -->
+<script>
+    (function () {
+      const canvas = document.getElementById('topoCanvas');
+      if (!canvas) return;
+      const ctx = canvas.getContext('2d');
+      const tooltip = document.getElementById('node-tooltip');
+      const tooltipTitle = document.getElementById('tooltip-title');
+      const tooltipAtt = document.getElementById('tooltip-att');
+      const tooltipLoad = document.getElementById('tooltip-load');
+      const tooltipStatus = document.getElementById('tooltip-status');
+      const coordReadout = document.getElementById('coord-readout');
+      const inspectTitle = document.getElementById('inspect-title');
+      const inspectDesc = document.getElementById('inspect-desc');
+      const inspectSync = document.getElementById('inspect-sync');
+      const inspectCount = document.getElementById('inspect-count');
+
+      let width = (canvas.width = canvas.parentElement.clientWidth);
+      let height = (canvas.height = canvas.parentElement.clientHeight);
+
+      window.addEventListener('resize', () => {
+        if (!canvas.parentElement) return;
+        width = canvas.width = canvas.parentElement.clientWidth;
+        height = canvas.height = canvas.parentElement.clientHeight;
+      });
+
+      // 3D Nodes definition representing department entities
+      const rawNodes = [
+        { id: 1, name: 'CS-101: Intro to Computing', x: -130, y: -60, z: -50, type: 'course', year: 'y1', att: '96%', load: 'Normal', active: true },
+        { id: 2, name: 'CS-201: Data Structures', x: 120, y: -70, z: 80, type: 'course', year: 'y2', att: '94%', load: 'Active Now', active: true },
+        { id: 3, name: 'CS-301: Algorithms & Theory', x: -40, y: 110, z: 120, type: 'course', year: 'y3', att: '89%', load: 'Normal', active: true },
+        { id: 4, name: 'Lab Alpha: AI Systems', x: 140, y: 80, z: -110, type: 'lab', year: 'y4', att: '98%', load: 'High Compute', active: true },
+        { id: 5, name: 'Lab Beta: Distributed Net', x: -120, y: 70, z: -80, type: 'lab', year: 'y3', att: '91%', load: 'Scheduled', active: true },
+        { id: 6, name: 'Faculty Coordination Hub', x: 0, y: -130, z: 0, type: 'admin', year: 'all', att: '100%', load: 'Normal', active: true },
+      ];
+
+      // Edge connections between nodes
+      const edges = [
+        [0, 1], [1, 2], [2, 3], [3, 4], [4, 5], [5, 0], [1, 5], [2, 4]
+      ];
+
+      let angleX = 0.35;
+      let angleY = 0.55;
+      let isDragging = false;
+      let lastMouseX = 0;
+      let lastMouseY = 0;
+      let hoveredNode = null;
+      let filterMode = 'all';
+
+      // Mouse Drag Controls
+      const container = document.getElementById('canvas-container');
+      container.addEventListener('mousedown', (e) => {
+        isDragging = true;
+        lastMouseX = e.clientX;
+        lastMouseY = e.clientY;
+      });
+
+      window.addEventListener('mouseup', () => {
+        isDragging = false;
+      });
+
+      container.addEventListener('mousemove', (e) => {
+        const rect = canvas.getBoundingClientRect();
+        const mx = e.clientX - rect.left;
+        const my = e.clientY - rect.top;
+
+        if (isDragging) {
+          const dx = e.clientX - lastMouseX;
+          const dy = e.clientY - lastMouseY;
+          angleY += dx * 0.007;
+          angleX -= dy * 0.007;
+          lastMouseX = e.clientX;
+          lastMouseY = e.clientY;
+        }
+
+        // Coordinate display
+        coordReadout.innerText = `${((angleX % (Math.PI * 2)).toFixed(2))}, ${((angleY % (Math.PI * 2)).toFixed(2))}`;
+
+        // Node picking test
+        let found = null;
+        for (let n of rawNodes) {
+          if (!n.visible) continue;
+          const dist = Math.hypot(n.projX - mx, n.projY - my);
+          if (dist < 18) {
+            found = n;
+            break;
+          }
+        }
+
+        if (found) {
+          hoveredNode = found;
+          tooltip.style.left = `${found.projX + 16}px`;
+          tooltip.style.top = `${found.projY - 24}px`;
+          tooltip.classList.remove('hidden');
+          tooltipTitle.innerText = found.name;
+          tooltipAtt.innerText = found.att;
+          tooltipLoad.innerText = found.load;
+          tooltipStatus.className = `w-2 h-2 rounded-full ${found.type === 'lab' ? 'bg-indigo-400' : 'bg-cyan-400'}`;
+        } else {
+          hoveredNode = null;
+          tooltip.classList.add('hidden');
+        }
+      });
+
+      container.addEventListener('click', () => {
+        if (hoveredNode) {
+          inspectTitle.innerText = hoveredNode.name;
+          inspectDesc.innerText = `${hoveredNode.name} status is currently ${hoveredNode.load}. Direct node synchronization running continuously.`;
+          inspectSync.innerText = hoveredNode.att;
+          inspectCount.innerText = hoveredNode.type === 'lab' ? '36 / 40' : '62 / 70';
+        }
+      });
+
+      // Filter Buttons
+      const filterButtons = document.querySelectorAll('.topo-filter');
+      filterButtons.forEach(btn => {
+        btn.addEventListener('click', () => {
+          filterButtons.forEach(b => {
+            b.classList.remove('bg-indigo-600', 'text-white');
+            b.classList.add('bg-[#131b2e]', 'text-slate-300');
+          });
+          btn.classList.add('bg-indigo-600', 'text-white');
+          btn.classList.remove('bg-[#131b2e]', 'text-slate-300');
+
+          if (btn.id === 'filter-y3') filterMode = 'y3';
+          else if (btn.id === 'filter-labs') filterMode = 'labs';
+          else filterMode = 'all';
+        });
+      });
+
+      document.getElementById('reset-cam').addEventListener('click', () => {
+        angleX = 0.35;
+        angleY = 0.55;
+      });
+
+      // Render Loop
+      function render() {
+        ctx.clearRect(0, 0, width, height);
+
+        // Auto gentle idle rotation if not dragging
+        if (!isDragging) {
+          angleY += 0.0018;
+        }
+
+        const cx = width / 2;
+        const cy = height / 2;
+        const fov = 340;
+
+        // Background cyber polar rings
+        ctx.strokeStyle = 'rgba(79, 70, 229, 0.15)';
+        ctx.lineWidth = 1;
+        ctx.beginPath();
+        ctx.arc(cx, cy, 140, 0, Math.PI * 2);
+        ctx.stroke();
+
+        ctx.strokeStyle = 'rgba(6, 182, 212, 0.1)';
+        ctx.beginPath();
+        ctx.arc(cx, cy, 70, 0, Math.PI * 2);
+        ctx.stroke();
+
+        // Project nodes to 2D
+        rawNodes.forEach((node) => {
+          // Visibility based on filter
+          if (filterMode === 'y3') {
+            node.visible = (node.year === 'y3' || node.year === 'y4');
+          } else if (filterMode === 'labs') {
+            node.visible = (node.type === 'lab');
+          } else {
+            node.visible = true;
+          }
+
+          // 3D rotation matrix
+          // Rotate Y
+          let x1 = node.x * Math.cos(angleY) + node.z * Math.sin(angleY);
+          let z1 = -node.x * Math.sin(angleY) + node.z * Math.cos(angleY);
+
+          // Rotate X
+          let y2 = node.y * Math.cos(angleX) - z1 * Math.sin(angleX);
+          let z2 = node.y * Math.sin(angleX) + z1 * Math.cos(angleX);
+
+          // Perspective projection
+          const scale = fov / (fov + z2 + 200);
+          node.projX = cx + x1 * scale;
+          node.projY = cy + y2 * scale;
+          node.scale = scale;
+          node.depth = z2;
+        });
+
+        // Draw structural connector edges
+        edges.forEach(([i, j]) => {
+          const n1 = rawNodes[i];
+          const n2 = rawNodes[j];
+          if (!n1.visible || !n2.visible) return;
+
+          ctx.beginPath();
+          ctx.moveTo(n1.projX, n1.projY);
+          ctx.lineTo(n2.projX, n2.projY);
+          ctx.strokeStyle = 'rgba(99, 102, 241, 0.45)';
+          ctx.lineWidth = 1.5;
+          ctx.stroke();
+        });
+
+        // Draw animated pulse packet along edges
+        const time = Date.now() * 0.002;
+        edges.forEach(([i, j], idx) => {
+          const n1 = rawNodes[i];
+          const n2 = rawNodes[j];
+          if (!n1.visible || !n2.visible) return;
+
+          const t = (Math.sin(time + idx) + 1) / 2;
+          const px = n1.projX + (n2.projX - n1.projX) * t;
+          const py = n1.projY + (n2.projY - n1.projY) * t;
+
+          ctx.fillStyle = '#06b6d4';
+          ctx.beginPath();
+          ctx.arc(px, py, 2.5, 0, Math.PI * 2);
+          ctx.fill();
+        });
+
+        // Sort nodes by depth for correct layering
+        const sortedNodes = [...rawNodes].sort((a, b) => b.depth - a.depth);
+
+        // Draw Nodes
+        sortedNodes.forEach((node) => {
+          if (!node.visible) return;
+
+          const isHovered = hoveredNode === node;
+          const radius = Math.max(6, (isHovered ? 12 : 8) * node.scale);
+
+          // Outer halo
+          ctx.beginPath();
+          ctx.arc(node.projX, node.projY, radius + 5, 0, Math.PI * 2);
+          ctx.fillStyle = node.type === 'lab' ? 'rgba(99, 102, 241, 0.35)' : 'rgba(6, 182, 212, 0.35)';
+          ctx.fill();
+
+          // Core node
+          ctx.beginPath();
+          ctx.arc(node.projX, node.projY, radius, 0, Math.PI * 2);
+          ctx.fillStyle = node.type === 'lab' ? '#6366f1' : (node.type === 'admin' ? '#06b6d4' : '#10b981');
+          ctx.fill();
+
+          // Node label
+          ctx.font = '600 11px Plus Jakarta Sans, Inter, sans-serif';
+          ctx.fillStyle = isHovered ? '#ffffff' : '#94a3b8';
+          ctx.fillText(node.name.split(':')[0], node.projX + radius + 6, node.projY + 4);
+        });
+
+        requestAnimationFrame(render);
+      }
+
+      requestAnimationFrame(render);
+    })();
+  </script>
+</div></main></div></body></html>

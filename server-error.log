@@ -1,0 +1,72 @@
+[Error] POST /auth/login → 401 UNAUTHORIZED: Invalid credentials
+[Error] POST /auth/login → 401 UNAUTHORIZED: Invalid credentials
+[Error] POST /auth/login → 422 VALIDATION_ERROR: Validation failed
+[Error] POST /auth/mfa-verify → 401 UNAUTHORIZED: Invalid or expired MFA challenge
+[Error] POST /auth/mfa-verify → 422 VALIDATION_ERROR: Validation failed
+[Error] GET /users → 403 FORBIDDEN: Role 'STUDENT' is not authorized to perform this action
+[Error] POST /users → 403 FORBIDDEN: Role 'STUDENT' is not authorized to perform this action
+[Error] POST /departments → 403 FORBIDDEN: Role 'FACULTY' is not authorized to perform this action
+[Error] GET /courses → 404 NOT_FOUND: Route GET /courses not found
+[Error] POST /auth/login → 401 UNAUTHORIZED: Invalid credentials
+[Error] POST /auth/login → 401 UNAUTHORIZED: Invalid credentials
+[Error] POST /auth/login → 422 VALIDATION_ERROR: Validation failed
+[Error] POST /auth/mfa-verify → 401 UNAUTHORIZED: Invalid or expired MFA challenge
+[Error] POST /auth/mfa-verify → 422 VALIDATION_ERROR: Validation failed
+[Error] GET /users → 403 FORBIDDEN: Role 'STUDENT' is not authorized to perform this action
+[Error] POST /users → 403 FORBIDDEN: Role 'STUDENT' is not authorized to perform this action
+[Error] POST /departments → 403 FORBIDDEN: Role 'FACULTY' is not authorized to perform this action
+[Error] GET /courses → 404 NOT_FOUND: Route GET /courses not found
+[Error] POST /auth/login → 401 UNAUTHORIZED: Invalid credentials
+[Error] POST /auth/login → 401 UNAUTHORIZED: Invalid credentials
+[Error] POST /auth/login → 422 VALIDATION_ERROR: Validation failed
+[Error] POST /auth/mfa-verify → 401 UNAUTHORIZED: Invalid or expired MFA challenge
+[Error] POST /auth/mfa-verify → 422 VALIDATION_ERROR: Validation failed
+[Error] GET /users → 403 FORBIDDEN: Role 'STUDENT' is not authorized to perform this action
+[Error] POST /users → 403 FORBIDDEN: Role 'STUDENT' is not authorized to perform this action
+[Error] POST /departments → 403 FORBIDDEN: Role 'FACULTY' is not authorized to perform this action
+[Error] GET /courses → 404 NOT_FOUND: Route GET /courses not found
+[Error] POST /auth/login → 401 UNAUTHORIZED: Invalid credentials
+[Error] POST /auth/login → 401 UNAUTHORIZED: Invalid credentials
+[Error] POST /auth/login → 422 VALIDATION_ERROR: Validation failed
+[Error] POST /auth/mfa-verify → 401 UNAUTHORIZED: Invalid or expired MFA challenge
+[Error] POST /auth/mfa-verify → 422 VALIDATION_ERROR: Validation failed
+[Error] GET /users → 403 FORBIDDEN: Role 'STUDENT' is not authorized to perform this action
+[Error] POST /users → 403 FORBIDDEN: Role 'STUDENT' is not authorized to perform this action
+[Error] POST /departments → 403 FORBIDDEN: Role 'FACULTY' is not authorized to perform this action
+[Error] GET /courses → 404 NOT_FOUND: Route GET /courses not found
+[Error] POST /auth/login → 401 UNAUTHORIZED: Invalid credentials
+[Error] POST /auth/login → 401 UNAUTHORIZED: Invalid credentials
+[Error] POST /auth/login → 422 VALIDATION_ERROR: Validation failed
+[Error] POST /auth/mfa-verify → 401 UNAUTHORIZED: Invalid or expired MFA challenge
+[Error] POST /auth/mfa-verify → 422 VALIDATION_ERROR: Validation failed
+[Error] GET /users → 403 FORBIDDEN: Role 'STUDENT' is not authorized to perform this action
+[Error] POST /users → 403 FORBIDDEN: Role 'STUDENT' is not authorized to perform this action
+[Error] POST /departments → 403 FORBIDDEN: Role 'FACULTY' is not authorized to perform this action
+[Error] GET /courses → 404 NOT_FOUND: Route GET /courses not found
+[Error] POST /auth/login → 401 UNAUTHORIZED: Invalid credentials
+[Error] POST /auth/login → 401 UNAUTHORIZED: Invalid credentials
+[Error] POST /auth/login → 422 VALIDATION_ERROR: Validation failed
+[Error] POST /auth/mfa-verify → 401 UNAUTHORIZED: Invalid or expired MFA challenge
+[Error] POST /auth/mfa-verify → 422 VALIDATION_ERROR: Validation failed
+[Error] GET /users → 403 FORBIDDEN: Role 'STUDENT' is not authorized to perform this action
+[Error] POST /users → 403 FORBIDDEN: Role 'STUDENT' is not authorized to perform this action
+[Error] POST /departments → 403 FORBIDDEN: Role 'FACULTY' is not authorized to perform this action
+[Error] GET /courses → 404 NOT_FOUND: Route GET /courses not found
+[Error] POST /auth/login → 401 UNAUTHORIZED: Invalid credentials
+[Error] POST /auth/login → 401 UNAUTHORIZED: Invalid credentials
+[Error] POST /auth/login → 422 VALIDATION_ERROR: Validation failed
+[Error] POST /auth/mfa-verify → 401 UNAUTHORIZED: Invalid or expired MFA challenge
+[Error] POST /auth/mfa-verify → 422 VALIDATION_ERROR: Validation failed
+[Error] GET /users → 403 FORBIDDEN: Role 'STUDENT' is not authorized to perform this action
+[Error] POST /users → 403 FORBIDDEN: Role 'STUDENT' is not authorized to perform this action
+[Error] POST /departments → 403 FORBIDDEN: Role 'FACULTY' is not authorized to perform this action
+[Error] GET /courses → 404 NOT_FOUND: Route GET /courses not found
+[Error] POST /auth/login → 401 UNAUTHORIZED: Invalid credentials
+[Error] POST /auth/login → 401 UNAUTHORIZED: Invalid credentials
+[Error] POST /auth/login → 422 VALIDATION_ERROR: Validation failed
+[Error] POST /auth/mfa-verify → 401 UNAUTHORIZED: Invalid or expired MFA challenge
+[Error] POST /auth/mfa-verify → 422 VALIDATION_ERROR: Validation failed
+[Error] GET /users → 403 FORBIDDEN: Role 'STUDENT' is not authorized to perform this action
+[Error] POST /users → 403 FORBIDDEN: Role 'STUDENT' is not authorized to perform this action
+[Error] POST /departments → 403 FORBIDDEN: Role 'FACULTY' is not authorized to perform this action
+[Error] GET /courses → 404 NOT_FOUND: Route GET /courses not found

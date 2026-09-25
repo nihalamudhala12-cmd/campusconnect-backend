@@ -1,0 +1,5 @@
+[db] PostgreSQL pool initialized for postgres@localhost:5432/campusconnect
+[db] PostgreSQL connectivity verified
+🚀 CampusConnect Backend v1.0.0 starting on port 3000
+   API Base URL: http://localhost:3000
+   Node Env: development

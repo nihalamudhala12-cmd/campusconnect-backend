@@ -1,0 +1,22 @@
+[Error] POST /auth/login → 422 VALIDATION_ERROR: Validation failed
+[Error] POST /auth/login → 401 UNAUTHORIZED: Invalid credentials
+[Error] POST /auth/mfa-verify → 404 NOT_FOUND: Route POST /auth/mfa-verify not found
+[Error] POST /auth/login → 401 UNAUTHORIZED: Invalid credentials
+[Error] POST /auth/login → 422 VALIDATION_ERROR: Validation failed
+[Error] POST /auth/mfa-verify → 404 NOT_FOUND: Route POST /auth/mfa-verify not found
+[Error] PUT /users/test-user-id → 401 UNAUTHORIZED: Authentication required
+[Error] PUT /users/invalid-id → 401 UNAUTHORIZED: Authentication required
+[Error] GET /users → 401 UNAUTHORIZED: Authentication required
+[Error] PUT /users/23930ae7-9c46-4bee-83e5-205204136a8a → 403 FORBIDDEN: Role 'FACULTY' is not authorized to perform this action
+[Error] PUT /users/23930ae7-9c46-4bee-83e5-205204136a8a → 403 FORBIDDEN: Role 'STUDENT' is not authorized to perform this action
+[Error] GET /users/23930ae7-9c46-4bee-83e5-205204136a8a → 401 UNAUTHORIZED: Authentication required
+[Error] GET /users → 401 UNAUTHORIZED: Authentication required
+[Error] PUT /users/da6cf0f8-7240-4506-9029-2f67d49f64c6 → 403 FORBIDDEN: Role 'STUDENT' is not authorized to perform this action
+[Error] POST /auth/login → 422 VALIDATION_ERROR: Validation failed
+[Error] POST /auth/mfa-verify → 400 SyntaxError: Expected property name or '}' in JSON at position 1 (line 1 column 2)
+[Error] POST /auth/mfa-verify → 400 SyntaxError: Expected property name or '}' in JSON at position 1 (line 1 column 2)
+[Error] POST /auth/mfa-verify → 404 NOT_FOUND: Route POST /auth/mfa-verify not found
+[Error] POST /auth/mfa-verify → 404 NOT_FOUND: Route POST /auth/mfa-verify not found
+[Error] POST /auth/mfa-verify → 404 NOT_FOUND: Route POST /auth/mfa-verify not found
+[Error] POST /auth/login → 401 UNAUTHORIZED: Invalid credentials
+[Error] POST /auth/login → 400 SyntaxError: Unexpected token '"', ""bad{json"" is not valid JSON
