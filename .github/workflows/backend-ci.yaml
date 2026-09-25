@@ -33,13 +33,13 @@ jobs:
 
       - run: npm ci
 
-      # 1. Create database schema / tables first
-      - run: npm run schema:setup # Replace with your schema script (e.g., node src/db/schema.js)
+      # 1. Initialize test database
+      - run: npm run db:test:setup
         env:
           DATABASE_URL: postgres://postgres:postgrespassword@localhost:5432/testdb
 
-      # 2. Seed database immediately after schema setup
-      - run: npm run db:seed # Replace with your seed script (e.g., node src/db/seed.js)
+      # 2. Apply database migrations
+      - run: npm run migrate:up
         env:
           DATABASE_URL: postgres://postgres:postgrespassword@localhost:5432/testdb
 
